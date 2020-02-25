@@ -30,7 +30,7 @@ Additionally, you can provide cloure to the constructor, that will call at any t
 Bind profiler instance inside AppServiceProvider.php
 ```php
 public function register() {
-    $this->app->instance('Profiler', new Profiler([
+    $this->app->instance('Zachete\Profiler', new Profiler([
         'logging_function' => function($labelName, $value) {
             info("Profile {$labelName} with {$value} seconds");
         }
