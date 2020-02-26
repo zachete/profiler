@@ -23,7 +23,7 @@ class Profiler {
             : $_SERVER['REQUEST_TIME_FLOAT'];
 
         $microtime = microtime(true) - $startMicrotime;
-        $result = round($microtime, 3);
+        $result = round($microtime, 5);
 
         if ($this->loggingFunction) {
             $this->loggingFunction->call($this, $labelName, $result);
